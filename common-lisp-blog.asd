@@ -6,5 +6,5 @@
   :version "0.0.1"
   :author "Heitor Chang"
   :license "MIT"
-  :depends-on (:3bmd :osicat)
+  :depends-on (:3bmd :osicat :local-time)
   :components ((:file "blog")))
