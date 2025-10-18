@@ -8,7 +8,7 @@
   "Convert the Markdown file with 'filename' and write to 'output-filename'"
   (with-open-file (out output-filename :direction :output :if-exists :supersede)
     (format out "~A~%" *html-header*)
-    (format out "~A~%" "        <p><a href=\"index.html\">Home page</a></p>")
+    (format out "~A~%" "        <p><a href=\"index.html\" target=\"_self\">Home page</a></p>")
     (3bmd:parse-string-and-print-to-stream (uiop:read-file-string filename) out)
     (format out "~A~%" *html-footer*)))
 

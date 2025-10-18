@@ -14,4 +14,4 @@ Load the system, change packages, and call `(blog)`
 
 ## Copying files to the public server
 
-`rsync -a cl-blog/ heitor@remote.com:/home/public/cl-blog`
+`rsync -cr cl-blog/ heitor@remote.com:/home/public/cl-blog`
