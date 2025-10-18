@@ -1,4 +1,4 @@
-(defpackage :com.heitorchang.blog (:use :asdf :cl))
+(defpackage :com.heitorchang.blog (:use :asdf :cl) (:export :write-cl-blog))
 (in-package :com.heitorchang.blog)
 
 (defsystem "common-lisp-blog"

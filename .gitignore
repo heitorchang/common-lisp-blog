@@ -2,3 +2,4 @@ build/
 cl-blog/
 *local*
 *debug*
+*.fasl
