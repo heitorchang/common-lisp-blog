@@ -7,7 +7,7 @@
     <head>
         <meta charset=\"utf-8\">
         <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
-        <title>Heitor's Common Lisp Blog</title>
+        <title>Heitor's Blog</title>
         <base target=\"_blank\">
         <style>
 body {
@@ -89,7 +89,7 @@ a {
     ;; Prepare index.html
     (with-open-file (out-index (merge-pathnames build-dir "index.html") :direction :output :if-exists :supersede)
       (format out-index "~A~%" *html-header*)
-      (format out-index "~A~%" "<h1>Heitor's Common Lisp Blog</h1><table class=\"index-table\">")
+      (format out-index "~A~%" "<h1>Heitor's Blog</h1><table class=\"index-table\">")
 
       ;; Iterate over list of Markdown files
       (dolist (filename (sort (uiop:directory-files (uiop/pathname:ensure-directory-pathname markdown-dir)) #'> :key #'ctime))
@@ -115,3 +115,7 @@ a {
 (defun write-cl-blog ()
   "Convenience function that uses predefined directory names."
   (blog "~/code/common-lisp-blog/markdown" "~/code/common-lisp-blog/cl-blog"))
+
+(defun write-personal-blog ()
+  "Convenience function that uses predefined directory names."
+  (blog "~/personal/personal-blog/markdown" "~/personal/personal-blog/personal-blog")  )
